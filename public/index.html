@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminales de Pago | Solicita tu cotización</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Terminales de pago para tu negocio</h1>
+  <p>Elige el dispositivo que te interesa y te contactamos.</p>
+</header>
+
+<main class="grid" id="grid">
+  <article class="card" data-device="sumup-terminal" data-label="SumUp Terminal">
+    <img src="images/sumup-terminal.jpg" alt="SumUp Terminal">
+    <h3>SumUp Terminal</h3>
+    <button class="cta">Quiero cotizar</button>
+  </article>
+
+  <article class="card" data-device="sumup-app" data-label="SumUp (App)">
+    <img src="images/sumup-app.jpg" alt="SumUp App">
+    <h3>SumUp App</h3>
+    <button class="cta">Quiero cotizar</button>
+  </article>
+
+  <article class="card" data-device="transbank" data-label="Transbank">
+    <img src="images/transbank.jpg" alt="Transbank">
+    <h3>Transbank</h3>
+    <button class="cta">Quiero cotizar</button>
+  </article>
+
+  <article class="card" data-device="redelcom" data-label="Redelcom">
+    <img src="images/redelcom.webp" alt="Redelcom">
+    <h3>Redelcom</h3>
+    <button class="cta">Quiero cotizar</button>
+  </article>
+</main>
+
+<!-- Modal formulario -->
+<div class="modal-overlay" id="overlay">
+  <div class="modal">
+    <button class="close" id="closeModal" aria-label="Cerrar">&times;</button>
+    <h2 id="modalTitle">Cotizar dispositivo</h2>
+    <p class="modal-sub">Déjanos tus datos y te contactamos a la brevedad.</p>
+
+    <form id="leadForm">
+      <label>Nombre completo
+        <input type="text" name="name" required maxlength="120">
+      </label>
+      <label>Email
+        <input type="email" name="email" required maxlength="160">
+      </label>
+      <label>Teléfono
+        <input type="tel" name="phone" required maxlength="40" placeholder="+56 9 1234 5678">
+      </label>
+      <input type="hidden" name="device" id="deviceInput">
+      <button type="submit" class="submit-btn" id="submitBtn">Enviar</button>
+    </form>
+
+    <p class="feedback" id="feedback"></p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

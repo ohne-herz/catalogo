@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Admin | Mantenedor</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .panel{max-width:960px;margin:40px auto;padding:0 20px;}
+  .panel h1{margin-bottom:6px;}
+  .panel .user-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;color:var(--gray);font-size:.9rem;}
+  .panel .user-row button{background:none;border:1px solid #d1d5db;padding:6px 12px;border-radius:6px;cursor:pointer;}
+  .section{background:#fff;border-radius:14px;padding:24px;margin-bottom:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+  .section h2{font-size:1.1rem;margin-bottom:14px;}
+  .config-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .config-row input{flex:1;min-width:220px;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;}
+  .config-row button{padding:10px 18px;border:none;border-radius:8px;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;}
+  table{width:100%;border-collapse:collapse;font-size:.9rem;}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #eee;}
+  th{color:var(--gray);font-weight:600;}
+  .msg{margin-top:10px;font-size:.85rem;}
+</style>
+</head>
+<body>
+<div class="panel">
+  <h1>Mantenedor</h1>
+  <div class="user-row">
+    <span id="whoami"></span>
+    <button id="logoutBtn">Cerrar sesión</button>
+  </div>
+
+  <section class="section">
+    <h2>Email de destino de los leads</h2>
+    <div class="config-row">
+      <input type="email" id="targetEmail" placeholder="ventas@tuempresa.cl">
+      <button id="saveConfig">Guardar</button>
+    </div>
+    <p class="msg" id="configMsg"></p>
+  </section>
+
+  <section class="section">
+    <h2>Leads recibidos</h2>
+    <table>
+      <thead>
+        <tr><th>Fecha</th><th>Dispositivo</th><th>Nombre</th><th>Email</th><th>Teléfono</th></tr>
+      </thead>
+      <tbody id="leadsBody"></tbody>
+    </table>
+  </section>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

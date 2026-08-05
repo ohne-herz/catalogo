@@ -1,0 +1,19 @@
+{
+  "name": "sitio-pos-terminales",
+  "version": "1.0.0",
+  "description": "Sitio web de captación de leads para terminales de pago (SumUp, Transbank, Redelcom) con mantenedor admin.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express-rate-limit": "^7.4.0"
+  }
+}
