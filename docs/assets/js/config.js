@@ -15,8 +15,8 @@ window.SITE_CONFIG = {
   // Credenciales de EmailJS (gratis en https://www.emailjs.com).
   // El "Public Key" está diseñado para ser público, no es secreto.
   emailjs: {
-    publicKey: "TU_PUBLIC_KEY",
-    serviceId: "TU_SERVICE_ID",
-    templateId: "TU_TEMPLATE_ID"
+    publicKey: "template_qo3ks99",
+    serviceId: "gmail_getnet",
+    templateId: "template_qo3ks99"
   }
 };
