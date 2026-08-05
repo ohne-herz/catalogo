@@ -102,10 +102,9 @@ app.get('/api/admin/leads', requireAdmin, (req, res) => {
 
 // ---------- Endpoint público: recepción del formulario ----------
 const DEVICE_LABELS = {
-  'sumup-app': 'SumUp (App)',
-  'sumup-terminal': 'SumUp Terminal',
-  'transbank': 'Transbank',
-  'redelcom': 'Redelcom'
+  'get-mini': 'Getnet Get Mini',
+  'get-classica': 'Getnet Get Clássica',
+  'get-smart': 'Getnet Get Smart'
 };
 
 app.post('/api/lead', leadLimiter, async (req, res) => {
