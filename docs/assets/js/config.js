@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   // Email donde quieres recibir los leads.
   // OJO: este valor viaja al navegador del visitante (es público,
   // como toda config en un sitio estático). No pongas nada sensible aquí.
-  targetEmail: "ventas@tuempresa.cl",
+  targetEmail: "ventasgetnetcl@gmail.com",
 
   // Credenciales de EmailJS (gratis en https://www.emailjs.com).
   // El "Public Key" está diseñado para ser público, no es secreto.
