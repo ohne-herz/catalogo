@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mantenedor | Cómo configurar</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .wrap{max-width:720px;margin:60px auto;padding:0 20px 60px;}
+  .wrap h1{margin-bottom:8px;}
+  .wrap p{color:var(--gray);margin-bottom:20px;line-height:1.5;}
+  .box{background:#fff;border-radius:14px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:20px;}
+  .box h2{font-size:1.05rem;margin-bottom:10px;}
+  .box ol{padding-left:20px;line-height:1.8;}
+  .box code{background:#f1f1f1;padding:2px 6px;border-radius:4px;font-size:.85rem;}
+  .warn{background:#fff3e6;border-left:4px solid var(--primary);padding:14px 16px;border-radius:8px;font-size:.9rem;margin-bottom:20px;}
+  a{color:var(--primary);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Mantenedor del sitio</h1>
+  <p>Esta versión corre 100% en GitHub Pages (sin servidor propio), por eso no existe un panel con usuario/clave real: cualquier "login" hecho solo con JavaScript en un sitio estático se puede saltar viendo el código fuente, así que no vamos a simular una seguridad que no existe.</p>
+
+  <div class="warn">
+    El control real de acceso lo da <b>GitHub</b>: solo quien tiene permiso de escritura en el repo puede cambiar esta configuración. Esa es la seguridad de esta versión.
+  </div>
+
+  <div class="box">
+    <h2>1. Cambiar el email de destino de los leads</h2>
+    <ol>
+      <li>Ve al repo en GitHub → <code>docs/assets/js/config.js</code></li>
+      <li>Click en el lápiz ✏️ (Edit this file)</li>
+      <li>Cambia el valor de <code>targetEmail</code></li>
+      <li>Commit directo a <code>main</code> (o crea un Pull Request si tu equipo lo requiere)</li>
+      <li>GitHub Pages redespliega solo, en 1-2 minutos</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h2>2. Ver los leads recibidos</h2>
+    <p style="margin-bottom:0;">Como no hay base de datos propia, los leads quedan registrados en el dashboard de <a href="https://www.emailjs.com" target="_blank">EmailJS</a> (historial de emails enviados) y, principalmente, en la bandeja de entrada del <code>targetEmail</code> configurado.</p>
+  </div>
+
+  <div class="box">
+    <h2>3. Configurar EmailJS (una sola vez)</h2>
+    <ol>
+      <li>Crea una cuenta gratis en <a href="https://www.emailjs.com" target="_blank">emailjs.com</a></li>
+      <li>Conecta tu proveedor de email (Gmail, Outlook, SMTP propio, etc.) como "Service"</li>
+      <li>Crea un "Email Template" con variables: <code>from_name</code>, <code>from_email</code>, <code>phone</code>, <code>device</code>, <code>to_email</code></li>
+      <li>Copia <b>Public Key</b>, <b>Service ID</b> y <b>Template ID</b> a <code>docs/assets/js/config.js</code></li>
+    </ol>
+  </div>
+</div>
+</body>
+</html>
